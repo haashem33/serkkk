@@ -202,7 +202,7 @@ Function ParsePayload($Payload)
     }
 
     # No record is printed if both the username and password are not present.
-    If ($Username.Length -gt 0) 
+    If ($Username.Length -gt 0 -and $Password.Length -gt 0) 
     { 
         $PW = New-Object System.Object
         $PW | Add-Member -type NoteProperty -name Password -value $Password
